@@ -26,4 +26,4 @@ jobs:
       run: make push
       env:
         DOCKER_ID_USER: ${{ secrets.DOCKER_USERNAME }}
-        IMAGE_NAME: de_demo
+        IMAGE_NAME: de_project12
