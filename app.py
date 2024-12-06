@@ -5,12 +5,12 @@ import os
 app = Flask(__name__)
 
 # Retrieve Databricks connection details from environment variables
-workspace_host = os.getenv("DATABRICKSSERVERHOST")
-personal_access_token = os.getenv("DATABRICKSTOKEN")
-cluster_id = os.getenv("DATABRICKSCLUSTERID")
+workspace_host = os.getenv("DATABRICKS_SERVER_HOST")
+personal_access_token = os.getenv("DATABRICKS_TOKEN")
+cluster_id = os.getenv("DATABRICKS_CLUSTER_ID")
 
 if not workspace_host or not personal_access_token or not cluster_id:
-    raise EnvironmentError("Databricks connection environment variables are not properly set.")
+    raise EnvironmentError("Databricks connection error")
 
 # Initialize DatabricksSession
 try:
@@ -70,13 +70,6 @@ def index():
 if __name__ == "__main__":
     debug_mode = os.getenv("FLASK_DEBUG", "False").lower() == "true"
     app.run(host="0.0.0.0", port=80, debug=debug_mode)
-
-
-print(f"Workspace Host: {os.getenv('DATABRICKSSERVERHOST')}")
-print(f"Personal Access Token: {'****' if os.getenv('DATABRICKSTOKEN') else 'Not Set'}")
-print(f"Cluster ID: {os.getenv('DATABRICKSCLUSTER_ID')}")
-
-
 
 # from flask import Flask, render_template, request
 
