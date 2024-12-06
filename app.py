@@ -70,28 +70,3 @@ def index():
 if __name__ == "__main__":
     debug_mode = os.getenv("FLASK_DEBUG", "False").lower() == "true"
     app.run(host="0.0.0.0", port=80, debug=debug_mode)
-
-# from flask import Flask, render_template, request
-
-# app = Flask(__name__)
-
-# # Language to greeting mapping
-# language_greetings = {
-#     "english": "Hello!",
-#     "korean": "안녕하세요!",
-#     "japanese": "こんにちは!"
-# }
-
-# @app.route("/", methods=["GET", "POST"])
-# def index():
-#     greeting = None
-
-#     if request.method == "POST":
-#         selected_option = request.form.get("dropdown")
-#         if selected_option:
-#             greeting = language_greetings.get(selected_option)
-
-#     return render_template("index.html", greeting=greeting)
-
-# if __name__ == "__main__":
-#     app.run(host="0.0.0.0", port=80, debug=True)
