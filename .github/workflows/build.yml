@@ -25,5 +25,4 @@ jobs:
     - name: Push Docker image
       run: make push
       env:
-        DOCKER_ID_USER: ${{ secrets.DOCKER_USERNAME }}
         IMAGE_NAME: de_project12
