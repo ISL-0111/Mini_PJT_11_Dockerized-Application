@@ -6,7 +6,7 @@
 ---------
 ### Proejct Purpose
 
-- This project uses PySpark to process a large dataset, focusing on running Spark SQL queries and performing data transformations. I am working with IBM's employee attrition dataset for these tasks.
+- This project uses PySpark to process a large dataset, focusing on running Spark SQL queries and 
 
 
 
